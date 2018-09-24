@@ -12,6 +12,12 @@ N <- length(y)
 # calculate sample means
 sample_means <- sapply(X = 1:K, FUN = function(c) {mean(x[y == c])})
 
+# equivalent iteration:
+sample_means <- c()
+for(c in 1:K) {
+  sample_means[c] <- mean(x[y == c])
+}
+
 # calculate sample deviations
 sample_deviations <- sapply(X = 1:K, FUN = function(c) {sqrt(mean((x[y == c] - sample_means[c])^2))})
 
