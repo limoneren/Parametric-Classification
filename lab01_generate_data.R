@@ -25,8 +25,8 @@ density2 <- dnorm(data_interval, mean = class_means[2], sd = class_deviations[2]
 density3 <- dnorm(data_interval, mean = class_means[3], sd = class_deviations[3])
 plot(data_interval, density1, type = "l", col = "red", lwd = 2, 
      ylim = c(-0.03, max(density1, density2, density3)),
-     xlab = "x", ylab = "density", las = 1)
-points(data_interval, density2, type = "l", col = "green", lwd = 2)
+     xlab = "x", ylab = "density", las = 1) # las is a style parameter, 0 or 1
+points(data_interval, density2, type = "l", col = "green", lwd = 2) # use points add on an existing figure
 points(data_interval, density3, type = "l", col = "blue", lwd = 2)
 points(points1, rep(-0.01, class_sizes[1]), type = "p", pch = 19, col = "red")
 points(points2, rep(-0.02, class_sizes[2]), type = "p", pch = 19, col = "green")
